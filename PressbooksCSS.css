@@ -1,0 +1,1027 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap";
+
+html { scroll-behavior: smooth;
+  scroll-padding-top: 3rem; }
+
+.part-title {
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: bold;
+}
+  
+/* Montserrat
+.front-matter p, .part p, .chapter p, .back-matter p, body#tinymce.wp-editor p {
+font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.front-matter, .part, .chapter, .back-matter, body#tinymce.wp-editor {
+font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.part-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+Verdana 
+
+.front-matter p, .part p, .chapter p, .back-matter p, body#tinymce.wp-editor p {
+font-family: "Verdana", sans-serif;
+}
+.front-matter, .part, .chapter, .back-matter, body#tinymce.wp-editor {
+font-family: "Verdana", sans-serif;
+}
+
+.part-title {
+  font-family: "Verdana", sans-serif;
+  font-size: 1.5rem;
+}
+*/
+/*accordions*/
+details {
+ border: 1px solid #555;
+    padding: 1em;
+  margin-top: 1em;
+
+}
+details + details {
+  margin-top: 0 !important;
+   border-top: none;
+}
+
+details > summary {
+  list-style: none; /* Remove default marker */
+}
+/*float: right; is all it takes to get it to the right*/
+details > summary::before {
+  content: '+';
+  font-size: 2rem; 
+  font-weight: 700 !important;
+  margin-right: 0.4em;
+  float: right;
+}
+details[open] > summary {
+    list-style:none;
+}
+details[open] > summary::before {
+  content: '☒';
+    font-size: 1.5rem; 
+  font-weight: 900;
+  margin-right: 0.5em;
+  float: right;
+}
+
+summary {
+  font-weight: bold;
+  cursor:pointer;
+    font-size: 1.25rem;
+}
+/*blockquote*/
+.blockquote, .front-matter blockquote, .part blockquote, .chapter blockquote, .back-matter blockquote, body#tinymce.wp-editor blockquote {
+  margin: 1em 0em 1em 0em;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  padding: 1rem 0 1rem 20px;
+  letter-spacing: normal;
+  word-spacing: normal;
+  border-left: 0 none initial;
+  line-height: 1.5555555556em;
+  text-align: justify;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: rgb(238 238 238);
+    box-sizing: border-box;
+  background: #F8F8F8;
+}
+.blockquoteside {
+  float:right;
+  width: 35%;
+    margin: 0 1em 1em 0em;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  padding: .5rem 1rem 1rem 20px;
+  letter-spacing: normal;
+  word-spacing: normal;
+  border-left: 0 none initial;
+  line-height: 1.5555555556em;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: rgb(238 238 238);
+    box-sizing: border-box;
+  background-color:#F8F8F8;
+}
+/*buttons */
+a.dark-button {
+  display: block !important;
+  width: fit-content !important;
+  margin: 0 auto !important;
+  padding: 1rem 1.25rem !important;
+  background: #32373c !important;
+  color: #fff !important;
+  font-weight: bold;
+  border-radius: 25px !important;
+  text-align: center !important;
+    transform: scale(1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+a.dark-button:hover,
+a.dark-button:focus {
+  transform: scale(1.04);
+}
+a.registerbutton {
+  display: block !important;
+  width: fit-content !important;
+  margin: auto;
+  margin-bottom: 1em !important;
+   margin-top: 1em !important;
+  padding: 1rem 1.25rem !important;
+  border: 3px solid #555;
+  border-radius: 15px !important;
+  text-align: center !important;
+  font-weight: bold;
+    transform: scale(1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  max-width: 80%;
+}
+
+a.registerbutton:hover,
+a.registerbutton:focus {
+  transform: scale(1.04);
+}
+/* Checklist 
+... gives me an interactive, accessible checkbox
+no JS */
+.checkbox {
+  margin-top: 0 !important;
+     font-size: 1.125rem !important;
+  border: none !important;
+  font-weight: normal !important;
+  padding: .25em !important;
+   }
+.checkbox > summary {
+  list-style: none;            /* keep */
+  font-weight: normal;         /* keep */
+  position: relative;          /* NEW: anchor the icon */
+  padding-left: calc(2.5rem + 0.5em);  /* NEW: box width + gap so ALL lines align */
+}
+.checkbox > summary::before {
+  content: '☐';
+  font-size: 2.5rem;
+  font-weight: 700 !important;
+  position: absolute;  /* NEW: take it out of flow */
+  left: 0;             /* NEW */
+  top: 0;         /* tiny nudge; tweak if needed */
+  float: none !important; /* REMOVE the float */
+}
+   .checkbox[open] > summary {
+       list-style:none;
+   }
+.checkbox[open] > summary::before {
+  content: '☑' !important;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+/*citation hanging indent*/
+.citation {
+      text-indent: -2em;
+    padding-left: 2em;
+    margin-bottom: 1em;
+}
+
+/*old columns*/
+.threecolumn {
+font-size:1em;
+line-height:1.5;
+  margin-bottom:1em;
+}
+.threecolumn p {
+  line-height: 1.5em;
+}
+
+.twocolumn {
+font-size:1em;
+line-height:1.5;
+column-count:2;
+column-gap:1.5em;
+column-width:320px;
+font-size:1em;
+line-height:1.5555555556em;
+margin-bottom:1em;
+margin-top:1em;
+text-align:initial;
+text-indent:0;
+}
+
+.twocolumn p {
+  font-size: inherit;
+line-height:1.5555555556em;
+  text-align: initial;
+  text-indent: 0;
+}
+/*column testing*/
+.customcolumn {
+  float: left;
+  width: 50%;
+ padding: .75em 1.75em .75em 0;
+}
+@media screen and (max-width: 1024px) {
+  .customcolumn {
+    width: 100%;
+  }
+}
+.customrow:after {
+  content: "";
+  clear: both;
+}
+
+/*columns*/
+.flex-grid {
+  display: flex;
+  gap: 1.75em;
+}
+
+.flex-grid > .col {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 800px) {
+  .flex-grid {
+    display: block;
+  }
+}
+/* fixes */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.remove-all-styles {
+  font-style: normal !important;
+    all: revert !important;
+}
+
+/*Headings*/
+:is(h1, h2, h3, h4, h5, h6) + p {
+  margin-top: 0.5em;
+}
+/**
+.chapter h2, .front-matter h2, .back-matter h2, .part h2 {
+  display: inline-block;
+  border-style: solid;
+  border-width: 5px 0px 0px 5px;
+  padding: 15px 50px 15px 15px;
+ border-radius: 7px 0px 7px 0px;
+  margin:1em auto auto 0;
+  font-weight: 600;
+}
+**/
+.chapter h2, .front-matter h2, .back-matter h2, .part h2 {
+  position: block !important;
+font-size:1.5em;
+  padding-bottom: 0rem;
+  margin-bottom: 0rem;
+}
+h2:not(
+  .h2--no-accent,
+  .h2--spotlight,
+  .section__subtitle.block-reading-meta__subtitle,
+  .quickguideh2,
+  .page-title,
+  .block__title.block-meta__title,
+  .block__title.block-info__title,
+  .block_title,
+  .block__title.block-toc__title
+)::before {  content:"" !important;
+  display: block !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 5rem !important;
+  height: .625rem !important;
+  background: #800000 !important;
+  margin-bottom: 0.5rem !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+h2.h2--no-accent::before {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+
+H2.h2--no-accent {
+  margin-top:1rem;
+}
+h2.h2--spotlight::before {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+h2.h2--spotlight {
+text-align: center;
+  color: #fff;
+  margin: 1rem;
+}
+.references {
+  display: block !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 15px !important;
+}
+.list {
+background-color:#444444;
+  color: #fff !important;
+border:#292929;
+border-radius:0 2em 2em 0!important;
+box-shadow:none!important;
+margin:0 !important;
+padding:.5em 0.5em .5em .5em !important;
+  border-style: none !important;
+    font-weight:600 !important;
+}
+.quickguideh2 {
+  display: block !important;
+  text-align: left !important;
+  border-style: none !important;
+  font-size: 2.6666666667em !important;
+  font-weight: normal !important;
+  padding: 0em 0em 0em 0em !important;
+  margin: 0em !important;
+}
+
+/**
+.nostyleh2 {
+  display: block !important;
+  text-align: left !important;
+  border-style: none !important;
+  padding-left:0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0.5rem !important;
+}**/
+.chapter h3, .part h3, .front-matter h3 {
+font-size:1.25em;
+  font-weight: bold;
+  margin:1em auto auto 0;
+}
+
+.chapter h4 {
+font-style:normal;
+font-size: 1.1em;
+ scroll-margin-top: 2em;
+
+}
+ 
+
+.chapter .wp-caption.alignnone {
+margin:.5em auto 1em;
+}
+
+
+/*horizontal rule*/
+hr {
+  border-bottom-color: #800000 !important;
+}
+  
+/*Images*/
+img.aligncenter {
+border:.75px solid #555;
+border-radius:6px;
+display:inline-block;
+margin-bottom:.5em
+}
+
+img.alignleft {
+border:.75px solid #555;
+border-radius:6px;
+display:inline-block;
+  margin-right: 1em;
+margin-bottom:.5em
+}
+
+img.alignnone {
+border:.75px solid #555;
+border-radius:6px;
+display:inline-block;
+margin-bottom:0.5em;
+}
+
+img.alignright{
+  border: .75px solid #555;
+  border-radius: 6px;
+  display: inline-block;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+img.noborder {
+border:none!important;
+border-radius:none!important;
+display:inline-block;
+margin-bottom:0!important;
+margin-top:0!important;
+}
+img.chapter {
+display:inline-block;
+margin-bottom:0!important;
+margin-top:0!important;
+}
+.front-matter .wp-caption figcaption, .front-matter .wp-caption .wp-caption-text, .part .wp-caption figcaption, .part .wp-caption .wp-caption-text, .chapter .wp-caption figcaption, .chapter .wp-caption .wp-caption-text, .back-matter .wp-caption figcaption, .back-matter .wp-caption .wp-caption-text {
+  font-style: normal;
+}
+.front-matter .wp-caption.alignnone, .front-matter .wp-nocaption.alignnone, .part .wp-caption.alignnone, .part .wp-nocaption.alignnone, .chapter .wp-caption.alignnone, .chapter .wp-nocaption.alignnone, .back-matter .wp-caption.alignnone, .back-matter .wp-nocaption.alignnone {
+  margin-bottom: 1em;
+  border: solid 1px #555;
+}
+.front-matter .wp-caption.aligncenter, .front-matter .wp-nocaption.aligncenter, .part .wp-caption.aligncenter, .part .wp-nocaption.aligncenter, .chapter .wp-caption.aligncenter, .chapter .wp-nocaption.aligncenter, .back-matter .wp-caption.aligncenter, .back-matter .wp-nocaption.aligncenter {
+margin-bottom: 1em;
+}
+figure {
+  border: none !important;
+  margin: 0 auto 0.625rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+figure figcaption {
+  padding-right: .5em; 
+  padding-left: .5em; 
+  padding-top: .5em;
+  contain: inline-size;  
+  text-align: left;  
+  font-size: .85rem !important;
+  border: 1px solid #555;
+    border-top: none !important;
+}
+/* image aligned vertical middle */
+/*style image with "style=min-width:IMAGE PX;"*/
+
+.imgcontainer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.icon {
+   display: block;     /* avoids inline-image baseline quirks */
+}
+.imgcontainer.right {
+  flex-direction: row-reverse; /* swap sides */
+}
+.media_text { overflow-wrap: anywhere; }
+/*style image with "style=min-width:IMAGE PX;"*/
+
+@media (max-width: 1024px) {
+  .imgcontainer,
+  .imgcontainer.right {
+    flex-direction: column;      /* icon above text */
+    align-items: flex-start;     /* keep text left */
+    gap: .5em;
+  }
+  .imgcontainer > img,
+  .imgcontainer > svg,
+  .imgcontainer .icon {
+    align-self: center;          /* center the icon horizontally */
+    display: block;              /* avoid baseline gaps */
+  }
+}
+
+/* image with text float*/
+.lsscPageEmployeePreview #employeePreview {
+    position: relative;
+    text-align:center;
+}
+.lsscPageEmployeePreview #employeePreviewStep1,
+.lsscPageEmployeePreview #employeePreviewStep2,
+.lsscPageEmployeePreview #employeePreviewStep3,
+.lsscPageEmployeePreview #employeePreviewStep4,
+.lsscPageEmployeePreview #employeePreviewStep5 {
+    position: absolute;
+    background-color: #fafafa;
+    padding: 10px;
+    border: 2px solid #B01009;
+  border-radius: 5px;
+    box-shadow: 1px 1px 2.5px #9d9fa2;
+    text-align:left;
+  font-size: 1em;
+}
+@media screen and (max-width: 1024px) {
+.lsscPageEmployeePreview #employeePreviewStep1,
+.lsscPageEmployeePreview #employeePreviewStep2,
+.lsscPageEmployeePreview #employeePreviewStep3,
+.lsscPageEmployeePreview #employeePreviewStep4,
+.lsscPageEmployeePreview #employeePreviewStep5 {
+    left: 0 !important;
+  top: 0 !important;
+  position: static !important;
+  border: none !important;
+  background-color: #fff !important;
+  box-shadow: none !important;
+  font-size: 1.125rem !important;
+  padding: .25em;
+  }
+}
+.lsscPageEmployeePreview .stepNumber {
+    margin-right: 5px;
+    display: inline-block;
+    font-size: 1em;
+    width: 1.8em;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+  padding: auto;
+}
+
+/*internal page navigation*/
+.navbar {
+  list-style-type: none!important;
+  margin: 0!important;
+  padding: 0 !important;
+  overflow: hidden!important;
+}
+.navitem {
+   display: inline!important;
+  padding: .25em .25em;
+  border-left: solid .5px;
+  font-weight: bold;
+}
+@media screen and (max-width: 1024px) {
+  .navbar {
+  list-style-type: none!important;
+  margin: 0!important;
+  padding: 0!important;
+    display: flex;
+    flex-direction: column;
+        align-item: flex-start;
+}
+  .navitem {
+    display: inline-block!important;
+  }
+}
+/* line breaks */
+.front-matter p, .part p, .chapter p, .back-matter p, body#tinymce.wp-editor p {
+  hyphens: none !important;
+}
+.front-matter, .part, .chapter, .back-matter, body#tinymce.wp-editor {
+  hyphens: none !important;
+}
+/*links*/
+a:not(:is(:hover, :focus)) {
+  text-decoration-color: 
+    color-mix(in srgb, currentColor, transparent 55%);
+}
+a {
+  text-underline-offset: 2px;
+}
+
+/*lists*/
+
+.front-matter ul, .part ul, .chapter ul, .back-matter ul, body#tinymce.wp-editor ul {
+    margin-top: 0.4285714286em;
+  margin-bottom: 0.4285714286em;
+  margin-left: 0;
+  padding-left: 2em;
+}
+.front-matter ul, .part ul, .chapter ul, .back-matter ul, body#tinymce.wp-editor ul {
+  margin-top: 0.4285714286em;
+  margin-bottom: 0.4285714286em;
+  margin-left: 0;
+  padding-left: 2em;
+}
+.front-matter ul ul, .part ul ul, .chapter ul ul, .back-matter ul ul, body#tinymce.wp-editor ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.front-matter ol, .part ol, .chapter ol, .back-matter ol, body#tinymce.wp-editor ol {
+  margin-top: 0.4285714286em;
+margin-bottom: 0.4285714286em;
+margin-left: 0;
+padding-left: 2em;
+}
+.front-matter ol ol, .part ol ol, .chapter ol ol, .back-matter ol ol, body#tinymce.wp-editor ol ol {
+  margin-bottom: 0;
+  margin-top: 0;
+  list-style-type: lower-alpha;
+}
+.front-matter ol ol ol, .part ol ol ol, .chapter ol ol ol, .back-matter ol ol ol, body#tinymce.wp-editor ol ol ol {
+  margin-bottom: 0;
+  margin-top: 0;
+  list-style-type: lower-roman;
+}
+
+.checklist {
+  list-style:none !important;
+  margin-left: 0;
+  margin-bottom: 1em;
+  padding-left: 0;
+}
+  .checklist li {
+background-image: url('https://pressbooks.bccampus.ca/langaraquickguides/wp-content/uploads/sites/2149/2024/07/CheckMark-e1720730080736.png');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: 2em;
+      padding: 1em 1em 1em 3em;
+    margin: 0 !important;
+}
+
+/*Speech bubbles*/
+.speechright {
+  border: .15em solid black;
+  border-radius: 2em 2em 2em 0;
+  padding: 1em;
+  float: right;
+  max-width: 60%;
+  margin-bottom: -7em;
+}
+.speechleft {
+   border: .15em solid black;
+  border-radius: 2em 2em 0 2em;
+  padding: 1em;
+  float: left;
+  max-width: 55%;
+  margin-bottom: -6em;
+}
+@media screen and (max-width: 1024px) {
+  .speechleft {
+     margin-bottom: 1em;
+    border-radius: 2em;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .speechright {
+     margin-bottom: 1em;
+        border-radius: 2em;
+    max-width: 100%;
+  }
+}
+/*Tables*/
+.front-matter table,.part table,.chapter table,.back-matter table,body#tinymce.wp-editor table {
+font-size:1em
+}
+
+tr:nth-child(even) {
+background-color:#f2f2f2
+}
+
+.hr {
+margin:1.5em auto
+}
+
+.front-matter table.shaded,.part table.shaded,.chapter table.shaded,.back-matter table.shaded,body#tinymce.wp-editor table.shaded {
+background-color:#40182B
+}
+
+.shaded {
+background-color:#7f0d09
+}
+
+thead {
+color:#fff
+}
+
+.front-matter table p,.part table p,.chapter table p,.back-matter table p,body#tinymce.wp-editor table p {
+padding:.25em;
+text-align:left
+}
+
+caption {
+  caption-side: top;
+  color: black;
+  padding-bottom: 0em;
+}
+
+/*Textboxes*/
+.textbox {
+  border: none !important;
+    background-color: #eee;
+}
+
+.textbox p, .bcc-box p {
+  margin-bottom: 0em;
+  text-align: left;
+  text-indent: 0;
+  word-wrap: normal;
+  overflow-wrap: normal;
+  color: #000;
+}
+
+.textbox.textbox {
+border-radius:2px;
+-webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.6); 
+box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.6);
+}
+
+.textbox.textbox .textbox__header {
+border-top-left-radius:2px;
+border-top-right-radius:2px;
+    font-weight: bold;
+}
+
+
+.textbox__header p {
+font-style:normal;
+   font-weight: bold;
+margin-bottom:.1em;
+margin-top:.1em;
+  color: #fff;
+}
+
+.textbox--disclaimer {
+    display: flex;
+  align-items: center;
+    width: 100%;
+  max-width: 100%;
+  gap: 1rem;
+  background-color: #444444;
+  color: #ffffff;
+  box-shadow: none !important;
+  border-radius: 2x !important;
+   padding: 2.5em 2.5em 2.5em 2.5em;
+  margin: 0.9em 0 0.9em 0;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  word-spacing: normal;
+  letter-spacing: normal;
+  line-height: 1.5555555556;
+  text-align: left;
+  text-indent: 0;
+  border-style: solid;
+  border-width: 0.05em;
+}
+.textbox--disclaimer::before {
+  content: "";
+  flex: 0 0 120px;
+  width: 120px;
+  height: 120px;
+  background-image: url("https://pressbooks.bccampus.ca/langaraquickguides/wp-content/uploads/sites/2149/2024/02/Untitled-design-5-150x150.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-right: 1rem;
+}
+.textbox--disclaimer > * {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .textbox--disclaimer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textbox--disclaimer::before {
+    width: 80px;
+    height: 80px;
+    flex-basis: 80px;
+  }
+}
+.textbox--event {
+  text-align: center;
+  background: #f5bd55;
+  padding: 1rem 0;
+  box-shadow: none !important;
+  font-weight: bold;
+}
+.textbox--example {
+  border-radius: 5px !important;
+  border: #555 solid 1px !important;
+  background-color: #fff !important;
+  box-shadow: none !important;
+}
+.textbox--group {
+  background-color: #01725c;
+  margin-top: 2.5em;
+    color: #ffffff;
+  box-shadow: none !important;
+  padding: 1rem;
+}
+.textbox.textbox--examples .textbox__content {
+padding:1.5em;
+}
+
+.textbox--icon {
+    display: flex;
+  align-items: center;
+    width: 100%;
+  max-width: 100%;
+  gap: 1rem;
+    border: none;
+  background-color: #eee;
+-webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.6); 
+box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.6);
+}
+.textbox--icon::after {
+  content: "";
+  flex: 0 0 120px;
+  width: 120px;
+  height: 120px;
+  background-image: url("https://pressbooks.bccampus.ca/langaraquickguides/wp-content/uploads/sites/2149/2024/01/BrightspaceLogo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-left: 1rem;
+}
+.textbox--icon > * {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .textbox--icon {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textbox--icon::before {
+    width: 80px;
+    height: 80px;
+    flex-basis: 80px;
+  }
+}
+
+.textbox--important {
+    display: flex;
+  align-items: center;
+    width: 100%;
+  max-width: 100%;
+  gap: 1rem;
+    border: none;
+  background-color: #eee;
+-webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.6); 
+box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.6);
+}
+
+.textbox--important::before {
+  content: "";
+  flex: 0 0 120px;
+  width: 120px;
+  height: 120px;
+  background-image: url("https://pressbooks.bccampus.ca/langaraquickguides/wp-content/uploads/sites/2149/2024/05/ImportantIcon-1.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-right: 1rem;
+}
+.textbox--important > * {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .textbox--important {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textbox--important::before {
+    width: 80px;
+    height: 80px;
+    flex-basis: 80px;
+  }
+}
+
+.textbox--list {
+background-color:#444444;
+border:#292929;
+border-radius:0 2em 2em 0!important;
+box-shadow:none!important;
+color:#FFF !important;
+font-size:1em;
+font-weight:700;
+margin-top:0;
+padding:.5em
+}
+.textbox--list p {
+  color: #fff;
+  font-weight: bold;
+}
+
+.textbox--nostyle {
+  border-radius:2x!important;
+  border: #555 solid 1px !important;
+  background-color: #fff !important;
+  box-shadow: none !important;
+}
+.quick{
+  border-radius: 2px;
+  background-color: #eee;
+  padding: 1em;
+  margin: 1em 0;
+    box-shadow: none! important;
+}
+.textbox--readmore {
+background-color:#444444;
+border:#292929;
+border-radius:0 2em 0.25em 0!important;
+box-shadow:none!important;
+color:#FFF;
+font-size:1.424em;
+font-weight:700;
+margin-top:0;
+padding:.5em
+}
+.textbox--recommendation {
+    display: flex;
+  align-items: center;
+    width: 100%;
+  max-width: 100%;
+  gap: 1rem;
+    border: none;
+  background-color: #eee;
+border-radius:15px !important;
+  box-shadow: none !important;
+}
+.textbox--recommendation::before {
+  content: "";
+  flex: 0 0 120px;
+  width: 120px;
+  height: 120px;
+  background-image: url("https://pressbooks.bccampus.ca/langaraquickguides/wp-content/uploads/sites/2149/2024/03/BestPractice-1.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-right: 1rem;
+}
+.textbox--recommendation > * {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .textbox--recommendation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textbox--recommendation::before {
+    width: 80px;
+    height: 80px;
+    flex-basis: 80px;
+  }
+}
+.textbox.shaded {
+  border: none;
+  background-color: #eee;
+-webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.6); 
+box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.6);
+}
+
+.textbox--sidebar {
+  float: right;
+  margin: 1em 0 1em 1em;
+  min-width: 40%;
+}
+@media (max-width: 768px) {
+  .textbox--sidebar {
+    float: none;
+    min-width: 100%;
+    max-width: none;
+    margin-left: 0 !important;
+  }
+}
+.textbox--spotlight {
+  background: #32373c;
+  padding: 1rem 0 1rem 0;
+  text-align: center;
+  color: #fff;
+  box-shadow: none !important;
+}
+
+.tips-flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tips-flex-grid .text-col {
+  flex: 0 0 calc(60% - 0.5rem);
+}
+
+.tips-flex-grid .textbox-col {
+  flex: 0 0 calc(40% - 0.5rem);
+}
+.textbox-col .textbox {
+  margin-block: 0;
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .tips-flex-grid {
+    flex-direction: column;
+  }
+
+  .tips-flex-grid .text-col,
+  .tips-flex-grid .textbox-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+      }
+
+}
